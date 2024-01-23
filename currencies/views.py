@@ -19,7 +19,6 @@ def get_currency():
         'symbols': 'RUB'
     }
     while True:
-        print("Pinging ...")
         response = requests.get(os.getenv('URL'), params=params, timeout=3.05).json()
         data = {
             'date': datetime.fromtimestamp(response.get('timestamp')).isoformat(),
